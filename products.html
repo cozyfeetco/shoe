@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Cozy Feet Co.</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('products.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        /* Sidebar styles */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            left: -250px;
+            top: 0;
+            transition: 0.3s;
+            padding-top: 60px;
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .sidebar a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .menu-btn {
+            position: absolute;
+            left: 10px;
+            top: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+        }
+        h1 {
+            margin-top: 40px;
+        }
+        .search-container {
+            margin: 20px auto;
+            width: 60%;
+        }
+        #search-bar {
+            width: 88%;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:end;
+            gap: 10px;
+            padding: 20px;
+        }
+        .product {
+            background: transparent;
+            backdrop-filter: blur(3px);
+            padding: 15px;
+            border-radius: 10px;
+            width: 300px;
+            text-align:center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        .product img {
+            width: 130px;
+            height: 120px;
+            border-radius: 10px;
+        }
+        .buy-btn {
+            background: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .buy-btn:hover {
+            background: #0056b3;
+        }
+        .slogan {
+            font-size: 14px;
+            color: yellow;
+            font-style: italic;
+        }
+       
+        </style>
+</head>
+ <!-- Sidebar -->
+ <div class="sidebar" id="sidebar">
+    <a href="dashboard.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="comments.html">Comments</a>
+    <a href="about.html">About Us</a>
+    <a href="ai-bot.html">AI Bot</a>
+    <a href="dash.html">Dashboard</a>
+    <a href="login.html">Logout</a>
+</div>
+
+<!-- Menu Button -->
+<button class="menu-btn" onclick="toggleMenu()">☰ Menu </button>
+<script>
+    function toggleMenu() {
+        var sidebar = document.getElementById("sidebar");
+        if (sidebar.style.left === "-250px") {
+            sidebar.style.left = "0";
+        } else {
+            sidebar.style.left = "-250px";
+        }
+    }
+</script>
+
+<body>
+    <h1>Our Shoes Collection</h1>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search for a Shoe..." onkeyup="searchProducts()">
+    </div>
+
+    <!-- Products List -->
+    <div class="products" id="product-list">
+        <div class="product">
+            <img src="brownshoes.png" alt="Brown Shoes">
+            <h3>Brown Shoes</h3>
+            <p class="slogan">"Classic Look, Modern Comfort!"</p>
+            <p>₹1,299</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product">
+            <img src="classicshoes.png" alt="Classic Shoes">
+            <h3>Classic Shoes</h3>
+            <p class="slogan">"Elegance That Never Fades!"</p>
+            <p>₹1,499</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product">
+            <img src="greatsneakers.png" alt="Great Sneakers">
+            <h3>Great Sneakers</h3>
+            <p class="slogan">"Step Into Comfort & Style!"</p>
+            <p>₹1,299</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product">
+            <img src="highsneakers.png" alt="High Sneakers">
+            <h3>High Sneakers</h3>
+            <p class="slogan">"Elevate Your Walk!"</p>
+            <p>₹1,399</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product">
+            <img src="partiesshoes.png" alt="Parties Shoes">
+            <h3>Party Shoes</h3>
+            <p class="slogan">"Shine Bright at Every Event!"</p>
+            <p>₹1,699</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product">
+            <img src="sneakers.png" alt="Sneakers">
+            <h3>Casual Sneakers</h3>
+            <p class="slogan">"Your Everyday Companion!"</p>
+            <p>₹1,199</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product">
+            <img src="swordshoes.png" alt="Sword Shoes">
+            <h3>Sword Shoes</h3>
+            <p class="slogan">"Sharp Looks, Sharp Comfort!"</p>
+            <p>₹1,499</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product">
+            <img src="boots.jpg" alt="Boots">
+            <h3>Stylish Boots</h3>
+            <p class="slogan">"Unmatched Ruggedness!"</p>
+            <p>₹1,599</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product">
+            <img src="shoes.jpg" alt="Leather Shoes">
+            <h3>Leather Shoes</h3>
+            <p class="slogan">"Step into timeless elegance. crafted for comfort, made to last!"</p>
+            <p>₹1,399</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product">
+            <img src="formal.jpg" alt="Formal Shoes">
+            <h3>Formal Shoes</h3>
+            <p class="slogan">"Perfect for the Boardroom!"</p>
+            <p>₹1,699</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+        <div class="product">
+            <img src="Tanshoes.png" alt="Tan Shoes">
+            <h3>Comfort Shoes</h3>
+            <p class="slogan">"Relaxation in Every Step!"</p>
+            <p>₹999</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+    </div>
+
+    <script>
+        function searchProducts() {
+            var input = document.getElementById("search-bar").value.toLowerCase();
+            var products = document.getElementsByClassName("product");
+
+            for (var i = 0; i < products.length; i++) {
+                var name = products[i].getElementsByTagName("h3")[0].innerText.toLowerCase();
+                if (name.includes(input)) {
+                    products[i].style.display = "block";
+                } else {
+                    products[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+    <title>Order Shoes</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .order-form { display: none; background: #805e5e; padding: 20px; width: 300px; margin: auto; border-radius: 10px; }
+        input, select { width: 90%; margin: 10px 0; padding: 10px; }
+        button1 { background: #e67e22; color: rgb(164, 114, 114); border: none; cursor: pointer; }
+        button1:hover { background: #d35400; }
+    </style>
+</head>
+<body>
+    <h1>Select Your Shoes &</h1>
+    <h2>click on "Buy Now" to complete your purchase</h2>
+    <select id="product-select">
+        <option value="" disabled selected>Select Product</option>
+        <option value="Brown Leather Shoes - ₹1,299">Brown Leather Shoes - ₹1,299</option>
+        <option value="Classic Shoes - ₹1,499">Classic Shoes - ₹1,499</option>
+        <option value="Great Sneakers - ₹1,299">Great Sneakers - ₹1,299</option>
+        <option value="High Sneakers - ₹1,399">High Sneakers - ₹1,399</option>
+        <option value="Parties Shoes - ₹1,699">Parties Shoes - ₹1,699</option>
+        <option value="Sneakers - ₹1,199"> Sneakers - ₹1,199</option>
+        <option value="Sword Shoes - ₹1,499">Sword Shoes - ₹1,499</option>
+        <option value="Stylish Leather Boots - ₹1,599">Stylish Leather Boots - ₹1,599</option>
+        <option value="Leather Shoes - ₹1,399">Leather Shoes - ₹1,399</option>
+        <option value="Formal Shoes - ₹1,699">Formal Shoes - ₹1,699</option>
+        <option value="Tan Shoes - ₹999">Tan Shoes - ₹999</option>
+        
+
+        
+    </select>
+    <button onclick="showOrderForm()">Buy Now</button><div class="order-form" id="order-form">
+    <h3>Order Details</h3>
+    <h4>Billing Counter</h4>
+    <p id="selected-product"></p>
+    <form id="order-form-submit" action="https://formspree.io/f/mgvoyyal" method="POST">
+        <label>Quantity (Pairs):</label>
+        <input type="number" name="quantity" id="quantity" min="1" value="1" required>
+        <label>Your Name:</label>
+        <input type="text" name="name" id="name" required>
+        <label>Phone or Email:</label>
+        <input type="text" name="contact" id="contact" required>
+        <label>Select Size:</label>
+        <select name="size" id="size" required>
+            <option>US Size 6-7 / S</option>
+            <option>US Size 8-9 / M</option>
+            <option>US Size 10-11 / L</option>
+            <option>US Size 12-13 / XL</option>
+        </select>
+        <input type="hidden" name="product" id="hidden-product">
+        <button type="submit">Place Order</button>
+    </form>
+</div>
+
+<script>
+    function showOrderForm() {
+        let product = document.getElementById("product-select").value;
+        if (!product) {
+            alert("Please select a product");
+            return;
+        }
+        document.getElementById("selected-product").innerText = "Product: " + product;
+        document.getElementById("hidden-product").value = product;
+        document.getElementById("order-form").style.display = "block";
+    }
+</script>
+
+    
+<footer>
+    <p>Contact Us: +91 7297382963</p>
+    <p>Email: cozyfeet73@gmail.com</p>
+</footer>
+
+
+</body>
+</html>
